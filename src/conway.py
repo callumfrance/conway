@@ -4,14 +4,15 @@ board = [
     [0, 0, 0, 0, 0, ],
     [0, 0, 0, 0, 0, ],
     [0, 0, 0, 0, 0, ],
-    [0, 0, 0, 0, 0, ],
-    [0, 0, 0, 0, 0, ],
+    [0, 1, 0, 0, 0, ],
+    [1, 0, 0, 0, 0, ],
 ]
 
 
 def run():
     print(board)
-    print_board(board)
+    #print_board(board)
+    print_board_alternate(board)
 
 
 def print_board(board1):
@@ -25,11 +26,10 @@ def print_board(board1):
 def print_board_alternate(board: list[list[int]]):
     """Another way of printing the board
     """
-    for row in board1:
+    for row in board:
         for item in row:
             print(str(item), end=' ')
         print()
 
 
-if __name__ == '__main__':
-    run()
+
