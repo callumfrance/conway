@@ -16,3 +16,35 @@ These rules, which compare the behavior of the automaton to real life, can be co
 
 The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed, live or dead; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick. Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations.
 
+---
+
+## Getting started
+
+### Set up the virtual environment
+
+#### MacOS
+Create a new virtual environment
+```sh
+python -m venv venv
+```
+
+Activate the previously create virtual environment
+```sh
+source venv/bin/activate
+```
+
+Install the dependencies from `requirements.txt`
+```sh
+pipenv install -r requirements.txt
+```
+
+### Run the linters and fixers
+Runs black auto-formatter
+```sh
+make style
+```
+
+Runs flake8 linter
+```sh
+make lint
+```
