@@ -1,6 +1,6 @@
 from functools import reduce
 
-from conway import board
+from board import board
 
 
 def cell(cell_state: int = 0):
