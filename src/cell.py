@@ -1,6 +1,6 @@
 from functools import reduce
 
-from board import board
+from .board import board
 
 
 def cell(cell_state: int = 0):
