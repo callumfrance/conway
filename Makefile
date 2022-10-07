@@ -2,7 +2,7 @@
 style-check:
 	black src/ --check
 
-# This will reformat all python files unders bookdifferent/ into the python black standard
+# This will reformat all python files into the python black standard
 style:
 	black src/
 
