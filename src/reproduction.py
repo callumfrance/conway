@@ -3,7 +3,7 @@ from cell import get_neighbour_tally
 
 def check_reproduction(board: list[list[int]], x: int, y: int) -> bool:
     """Any dead cell with exactly three live neighbours becomes a live cell,
-     as if by reproduction.
+    as if by reproduction.
     """
     return get_neighbour_tally(board, x, y) == 3
 
