@@ -1,12 +1,20 @@
+from os import system
+
 from .board import board
 
 
 def run():
-    print_board_alternate(board)
+    """Loops over the program forever.
+    Press any key to continue to the next 'tick'
+    """
+    while True:
+        system("clear")
+        print_board(board)
+        input()
 
 
-def print_board_alternate(board: list[list[int]]):
-    """Another way of printing the board"""
+def print_board(board: list[list[int]]):
+    """Prints the board to stdout"""
     length = len(board[0])
     for row_index, row in enumerate(board):
         if row_index == 0:
