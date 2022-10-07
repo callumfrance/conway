@@ -48,3 +48,8 @@ Runs flake8 linter
 ```sh
 make lint
 ```
+
+Run the unit tests
+```sh
+make test
+```
