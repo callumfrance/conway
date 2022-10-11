@@ -3,6 +3,13 @@ from os import system
 from .board import board
 
 
+def process_one_tick(board: list[list[int]]):
+    # TODO fill in this function to iterate over every cell in every
+    # row and column, processing whether it will be alive or dead,
+    # and updating the board appropriately
+    pass
+
+
 def run():
     """Loops over the program forever.
     Press any key to continue to the next 'tick'

@@ -4,6 +4,18 @@ from .board import board
 
 
 def cell(cell_state: int = 0):
+    # TODO fill in this function to process alive or dead computation
+    # depending on what the state of the cell is
+    pass
+
+
+def process_alive():
+    # TODO fill in this function to check the 'alive' conditions of a cell
+    pass
+
+
+def process_dead():
+    # TODO fill in this function to check the 'dead' conditions of a cell
     pass
 
 
