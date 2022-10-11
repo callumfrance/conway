@@ -1,6 +1,6 @@
 from functools import reduce
 
-from src.reproduction import check_reproduction
+from .reproduction import check_reproduction
 
 from .board import board
 

@@ -1,4 +1,4 @@
-from cell import get_neighbour_tally
+from .cell import get_neighbour_tally
 
 
 def check_reproduction(board: list[list[int]], x: int, y: int) -> bool:
