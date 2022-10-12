@@ -1,4 +1,4 @@
-from cell import get_neighbour_tally
+from .cell.get_neighbour_tally import get_neighbour_tally
 
 
 def check_next_gen(board: list[list[int]], x: int, y: int) -> bool:
