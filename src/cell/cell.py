@@ -11,6 +11,7 @@ def cell(board: list[list[int]], x: int, y: int) -> int:
     else:
         return process_alive(board, x, y)
 
+
 def process_alive(board: list[list[int]], x: int, y: int):
     # TODO fill in this function to check the 'alive' conditions of a cell
     pass
