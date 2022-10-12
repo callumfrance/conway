@@ -1,4 +1,7 @@
 from ..reproduction import check_reproduction
+from ..underpopulation import check_underpopulation
+from ..overpopulation import check_overpopulation
+from ..next_gen import check_next_gen
 
 
 def cell(board: list[list[int]], x: int, y: int) -> int:
@@ -12,9 +15,16 @@ def cell(board: list[list[int]], x: int, y: int) -> int:
         return process_alive(board, x, y)
 
 
-def process_alive(board: list[list[int]], x: int, y: int):
+def process_alive(board: list[list[int]], x: int, y: int) -> int:
     # TODO fill in this function to check the 'alive' conditions of a cell
-    pass
+    is_underpopulated = check_underpopulation(board, x, y)
+    is_nextgen = check_next_gen(board, x, y)
+    is_overpopulated = check_overpopulation(board, x, y)
+
+    if is_nextgen and not (is_underpopulated or is_overpopulated):
+        return 1
+    else:
+        return 0
 
 
 def process_dead(board: list[list[int]], x: int, y: int) -> int:
