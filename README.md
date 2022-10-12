@@ -35,7 +35,7 @@ source venv/bin/activate
 
 Install the dependencies from `requirements.txt`
 ```sh
-pip install -r requirements.txt
+pipenv install -r requirements.txt
 ```
 
 ### Run the linters and fixers
