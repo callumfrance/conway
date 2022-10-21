@@ -5,8 +5,9 @@ from ..next_gen import check_next_gen
 
 
 def cell(board: list[list[int]], x: int, y: int) -> int:
-    # TODO fill in this function to process alive or dead computation
-    # depending on what the state of the cell is
+    """The function inputs the board which is list of list of integers,
+    x and y as coordinates and returns an integer 0 which is dead cell or 1 which is
+    a live cell"""
     test_cell = board[x][y]
 
     if test_cell == 0:

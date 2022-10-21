@@ -2,21 +2,37 @@ from os import system
 
 from .board import board
 
+from src.cell.cell import cell
 
-def process_one_tick(board: list[list[int]]):
+
+def process_one_tick(board: list[list[int]]) -> list[list[int]]:
     # TODO fill in this function to iterate over every cell in every
     # row and column, processing whether it will be alive or dead,
     # and updating the board appropriately
-    pass
+    output: list[list[int]] = []
+
+    for row_index, row in enumerate(board):
+        output_row: list[int] = []
+
+        for cell_index, _ in enumerate(row):
+            output_row.append(cell(board, row_index, cell_index))
+
+        output.append(output_row)
+
+    return output
 
 
 def run():
     """Loops over the program forever.
     Press any key to continue to the next 'tick'
     """
+    current_board = board
+
     while True:
         system("clear")
-        print_board(board)
+        print_board(current_board)
+        current_board = process_one_tick(current_board)
+
         input()
 
 
