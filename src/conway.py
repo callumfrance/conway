@@ -45,10 +45,16 @@ def print_board(board: list[list[int]]):
         if row_index <= 4:
             print("|", end=" ")
         for item in row:
-            print(str(item), end=" ")
+            print(mask_cell(item), end=" ")
         if row_index <= 4:
             print("|", end=" ")
         if row_index == length - 1:
             print()
             print("+ - - - - - +")
         print()
+
+
+def mask_cell(item, alive='@', dead='.') -> str:
+    """Masks the alive/dead cells with any string you want.
+     By default '@' for alive and '.' for dead"""
+    return alive if item == 1 else dead
