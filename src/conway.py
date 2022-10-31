@@ -54,7 +54,7 @@ def print_board(board: list[list[int]]):
         print()
 
 
-def mask_cell(item, alive='@', dead='.') -> str:
+def mask_cell(item, alive="@", dead=".") -> str:
     """Masks the alive/dead cells with any string you want.
-     By default '@' for alive and '.' for dead"""
+    By default '@' for alive and '.' for dead"""
     return alive if item == 1 else dead
